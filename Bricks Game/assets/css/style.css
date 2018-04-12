@@ -1,0 +1,150 @@
+@font-face {
+    font-family: GameOver;
+    font-weight: bold;
+    src: url('../fonts/game_over.otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: GameOver,bold;
+    font-size: 60px;
+    line-height: 45px;
+    width: 100%;
+}
+
+canvas {
+    background-color: #000;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: .85em;
+    background-color: transparent;
+    border: 4px solid #4c756c;
+    padding-top: -10px;
+    /*color: white;*/
+    color: #4c756c;
+}
+
+button:hover {
+    background-color: white;
+    color: gray;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.box {
+    overflow: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.controls {
+    font-size: 2em;
+    width: 100%;
+    margin-top: 200px;
+    overflow: auto;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+.button {
+    background-color: grey;
+    margin: 0;
+    width: 45%;
+    height: 220px;
+}
+
+.sbutton {
+    margin-top: 10px;
+    background-color: #636c72;
+    width: 20%;
+}
+
+@media screen and (orientation: landscape) and (min-device-width: 1024px) {
+    .controls {
+        display: none;
+    }
+}
+
+.main {
+    width: 1009px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: gray;
+}
+
+.auth {
+    z-index: 100;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 100px;
+    width: 1009px;
+    /*width: 100%;*/
+    height: 100%;
+    background-color: #d3eefb;
+    color: #4c756c;
+}
+
+.game {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 45px 45px 45px;
+    width: 919px;
+    height: 768px;
+}
+
+.topbar {
+    height: 45px;
+    padding: 0 45px;
+}
+
+.right {
+    text-align: right;
+    float: right;
+    width: 15%;
+}
+
+.right button {
+    margin-top: 3px;
+}
+
+.left {
+    float: left;
+    width: 15%;
+    text-align: left;
+}
+
+.center {
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+}

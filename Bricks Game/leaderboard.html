@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+    body{
+        text-align: center;
+        max-width: 1000px;
+        width: 1000px;
+        margin: auto;
+    }
+    h1{
+        padding: 30px;
+        margin: 0px;
+        background-image: url('assets/images/1_1.jpg');
+        opacity: 0.8;
+    }
+    a{
+        position: relative;
+        top: -44px;
+        left: 420px;
+        color: white;
+        text-decoration: none;
+        font-size: 0.7em;
+    }
+    table{
+        position: relative;
+        top: -44px;
+    }
+    thead{
+        background-color: #f2f6ff!important;
+    }
+    #resultTable{
+        background-color: #cdf9f9;
+        color: #144024;
+    }
+    #resultTable tr:nth-child(even){
+        background-color: #9ec5c5;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="assets/css/leaderboardStyle.css" type="text/css">
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <div class="content">
+        <div>
+            <h1>Leaderboard</h1>
+            <a href="index.html">Return To Game</a>
+        </div>
+        
+
+        <table>
+            <thead>
+                <th>#</th>
+                <th>User Name</th>
+                <th>Score</th>
+            </thead>
+            <tbody id="resultTable">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(function () {
+            let table = "";
+            let data = JSON.parse(localStorage.getItem("resultTable"));
+            $("#result").text(
+                data
+            );
+            let res = [];
+            for(let i in data) {
+                res.push([data[i].userName, data[i].scores])
+            }
+            res.sort(function (a, b) {
+                return a[1] - b[1];
+            }).reverse();
+
+            for(let i=0; i < res.length; i ++) {
+                table += "<tr><td>";
+                table += i+1 + "</td>" + "<td>" + res[i][0] +"</td>" + "<td>" + res[i][1] +"</td>";
+                table += "</tr>";
+            }
+            $("#resultTable").html(table);
+        });
+    </script>
+</body>
+</html>

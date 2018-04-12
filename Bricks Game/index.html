@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=1009,user-scalable=no" />
+    <title>Breakout Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?112" />
+    <script src="assets/js/howler.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/pixi.min.js"></script>
+    <script src="assets/js/app.js?321"></script>
+</head>
+<style type="text/css">
+    body{
+        text-align: center;
+        max-width: 1000px;
+        width: 1000px;
+        margin: auto;
+        left: 0px;
+    }
+    h1{
+        padding: 40px;
+        margin: 0px;
+        background-image: url('assets/images/1_1.jpg');
+        opacity: 0.8;
+        color: white;
+    }
+</style>
+<body>
+    <div class="auth">
+        <div>
+            <h1>Breakout</h1>
+        </div>
+         <label>Game Speed:
+            <select id="gameSpeed">
+                <option value="3">Slow</option>
+                <option value="5">Normal</option>
+                <option value="7">Fast</option>
+            </select></label><br><br>
+        <label>Enter Your Name:<br>
+        <input id="userName" type="text" size="30" style="font-size: 20px; width: 20%;"></label><br><br>
+        <button id="gameStart">Enter</button><br><br>
+        <a href="leaderboard.html"> Leaderboard </a>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <div id="score" class="left">Score: <span id="scoreValue">0</span></div>
+            <div class="center"></div>
+            <div id="lives" class="right">Lives: <span id="livesCount">3</span></div>
+        </div>
+        <div class="game">
+            <div id="renderer"></div>
+        </div>
+    </div>
+
+    <div class="controls" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+        <div class="box">
+            <div class="button float-left" id="left">left</div>
+            <div class="button float-right" id="right">right</div>
+        </div>
+        <div id="space" class="button sbutton float-left">&lt;/||</div>
+        <div id="new" class="button sbutton float-right">New</div>
+    </div>
+</body>
+</html>

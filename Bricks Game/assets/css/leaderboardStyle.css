@@ -1,0 +1,24 @@
+@font-face {
+    font-family: GameOver;
+    font-weight: bold;
+    src: url('../fonts/game_over.otf');
+}
+body {
+    color: white;
+    background-color: #4b5257;
+    font-family: GameOver,bold;
+    font-size: 60px;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+thead {
+    border: black solid 1px;
+    background-color: #dddddd;
+    color: black;
+}
